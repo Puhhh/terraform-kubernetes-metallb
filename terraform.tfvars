@@ -1,2 +1,1 @@
-helm-custom-values      = true
-helm-custom-values-path = "values.yaml"
+helm-custom-values = true
