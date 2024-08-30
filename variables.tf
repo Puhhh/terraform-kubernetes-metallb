@@ -64,11 +64,9 @@ variable "helm-custom-values-path" {
 variable "ipaddresspool-start" {
   description = "IPAddressPool Start IP Address"
   type        = string
-  default     = ""
 }
 
 variable "ipaddresspool-end" {
   description = "IPAddressPool End IP Address"
   type        = string
-  default     = ""
 }
