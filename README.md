@@ -35,10 +35,10 @@ No modules.
 | <a name="input_helm-chart-repo"></a> [helm-chart-repo](#input\_helm-chart-repo) | Helm Chart Repo | `string` | `"https://metallb.github.io/metallb"` | no |
 | <a name="input_helm-chart-version"></a> [helm-chart-version](#input\_helm-chart-version) | Helm Chart Version | `string` | `"0.14.5"` | no |
 | <a name="input_helm-custom-values"></a> [helm-custom-values](#input\_helm-custom-values) | Use Helm Custom Values | `bool` | `false` | no |
-| <a name="input_helm-custom-values-path"></a> [helm-custom-values-path](#input\_helm-custom-values-path) | Helm Custom Values Path | `string` | `"values.yaml"` | no |
+| <a name="input_helm-custom-values-path"></a> [helm-custom-values-path](#input\_helm-custom-values-path) | Helm Custom Values Path | `string` | `""` | no |
 | <a name="input_helm-name"></a> [helm-name](#input\_helm-name) | Helm Release Name | `string` | `"metallb"` | no |
-| <a name="input_ipaddresspool-end"></a> [ipaddresspool-end](#input\_ipaddresspool-end) | IPAddressPool End IP Address | `string` | `"172.168.101.105"` | no |
-| <a name="input_ipaddresspool-start"></a> [ipaddresspool-start](#input\_ipaddresspool-start) | IPAddressPool Start IP Address | `string` | `"172.168.101.100"` | no |
+| <a name="input_ipaddresspool-end"></a> [ipaddresspool-end](#input\_ipaddresspool-end) | IPAddressPool End IP Address | `string` | `""` | no |
+| <a name="input_ipaddresspool-start"></a> [ipaddresspool-start](#input\_ipaddresspool-start) | IPAddressPool Start IP Address | `string` | `""` | no |
 | <a name="input_kubeconfig-path"></a> [kubeconfig-path](#input\_kubeconfig-path) | Kubeconfig Path | `string` | `"~/.kube/config"` | no |
 | <a name="input_metallb-namespace"></a> [metallb-namespace](#input\_metallb-namespace) | Metallb Namespace | `string` | `"metallb-system"` | no |
 | <a name="input_namespace-labels"></a> [namespace-labels](#input\_namespace-labels) | Namespace Labels | `map(string)` | <pre>{<br>  "pod-security.kubernetes.io/audit": "privileged",<br>  "pod-security.kubernetes.io/enforce": "privileged",<br>  "pod-security.kubernetes.io/warn": "privileged"<br>}</pre> | no |
@@ -47,13 +47,3 @@ No modules.
 
 No outputs.
 <!-- END_TF_DOCS -->
-
-## How to use
-
-Change S3 values 
-
-## Optional 
-
-If you need to change the default values of variables, add them to the *terraform.tfvars* file.
-
-If the value of *helm-custom-values* is *true*, *values.yaml* will be used. You can modify *values.yaml*.

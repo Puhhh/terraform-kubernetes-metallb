@@ -53,17 +53,22 @@ variable "helm-custom-values" {
 variable "helm-custom-values-path" {
   description = "Helm Custom Values Path"
   type        = string
-  default     = "values.yaml"
+  default     = ""
+
+  validation {
+    condition     = !(var.helm-custom-values && var.helm-custom-values-path == "")
+    error_message = "helm-custom-values-path must not be null when helm-custom-values is true."
+  }
 }
 
 variable "ipaddresspool-start" {
   description = "IPAddressPool Start IP Address"
   type        = string
-  default     = "172.168.101.100"
+  default     = ""
 }
 
 variable "ipaddresspool-end" {
   description = "IPAddressPool End IP Address"
   type        = string
-  default     = "172.168.101.105"
+  default     = ""
 }
