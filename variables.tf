@@ -26,12 +26,6 @@ variable "namespace-labels" {
   }
 }
 
-variable "helm-name" {
-  description = "Helm Release Name"
-  type        = string
-  default     = "metallb"
-}
-
 variable "helm-chart-name" {
   description = "Helm Chart Name"
   type        = string
